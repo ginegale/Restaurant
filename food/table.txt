@@ -1,0 +1,10 @@
+DROP TABLE IF EXISTS `food`;
+CREATE TABLE IF NOT EXISTS `food` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'food code',
+  `name` varchar(30) NOT NULL COMMENT 'food name',
+  `description` text NOT NULL COMMENT 'food description',
+  `price` double NOT NULL COMMENT 'food price',
+  `image` varchar(50) NOT NULL COMMENT 'food image path',
+  `cat_id` int(11) NOT NULL COMMENT 'food category code',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;

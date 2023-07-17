@@ -1,0 +1,10 @@
+DROP TABLE IF EXISTS `mk_order_detail`;
+CREATE TABLE IF NOT EXISTS `mk_order_detail` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'code',
+  `food_id` int(11) NOT NULL COMMENT 'food code',
+  `order_id` int(11) NOT NULL COMMENT 'order code',
+  `qty` int(11) NOT NULL COMMENT 'quantity',
+  `status` varchar(30) NOT NULL COMMENT 'status',
+  `insert_time` timestamp NOT NULL DEFAULT current_timestamp() COMMENT 'timestamp to new order',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
